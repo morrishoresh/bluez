@@ -1217,7 +1217,7 @@ struct avdtp_remote_sep *avdtp_find_remote_sep(struct avdtp *session,
 {
 	GSList *l;
 
-	if (lsep->info.inuse)
+	if (!lsep || lsep->info.inuse)
 		return NULL;
 
 	for (l = session->seps; l != NULL; l = g_slist_next(l)) {
