@@ -32,7 +32,7 @@ extern "C" {
 
 #include <sys/socket.h>
 
-#define HCI_MAX_DEV	16
+#define HCI_MAX_DEV	32
 
 #define HCI_MAX_ACL_SIZE	(1492 + 4)
 #define HCI_MAX_SCO_SIZE	255
