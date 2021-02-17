@@ -509,7 +509,7 @@ static gboolean auto_config(gpointer data)
 	struct btd_service *service;
 
 	/* Check if configuration was aborted */
-	if (setup->sep->stream == NULL)
+	if (setup == NULL || setup->sep == NULL || setup->sep->stream == NULL)
 		return FALSE;
 
 	if (setup->err != NULL)
